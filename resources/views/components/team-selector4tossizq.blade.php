@@ -19,7 +19,7 @@
                                                 
                                                 <div class="flex items-center gap-3">
                                                     <template x-if="selectedTeam">
-                                                        <img :src="'https://api.fifa.com/api/v3/picture/flags-sq-1/'+ selectedTeam.code" 
+                                                        <img :src="'{{ asset('images/flags/') }}'+ selectedTeam.code'+'.png'" alt="" 
                                                             class="w-6 h-4 object-cover">
                                                     </template>
                                                     <span x-text="selectedTeam ? selectedTeam.name : 'Selecc'"></span>
@@ -45,7 +45,7 @@
                                                         class="cursor-pointer hover:bg-indigo-600 hover:text-white px-4 py-2 flex items-center gap-3">
                                                             <label class="flex items-center justify-between p-2 border rounded cursor-pointer hover:bg-gray-50">
                                                                 <div class="flex items-center gap-2">
-                                                                    <img src="https://api.fifa.com/api/v3/picture/flags-sq-1/{{ $game->team1->fifa_code }}" class="w-6 h-4">
+                                                                    <img src="{{ $game->team1->flag_url }}" class="w-6 h-4">
                                                                     <span>{{ $game->team1->fifa_code }}</span>
                                                                 </div>
                                                                 
@@ -54,7 +54,7 @@
                                                         class="cursor-pointer hover:bg-indigo-600 hover:text-white px-4 py-2 flex items-center gap-3">
                                                             <label class="flex items-center justify-between p-2 border rounded cursor-pointer hover:bg-gray-50">
                                                                 <div class="flex items-center gap-2">
-                                                                    <img src="https://api.fifa.com/api/v3/picture/flags-sq-1/{{ $game->team2->fifa_code }}" class="w-6 h-4">
+                                                                    <img src="{{ $game->team2->flag_url }}" class="w-6 h-4">
                                                                     <span>{{ $game->team2->fifa_code }}</span>
                                                                 </div>
                                                             
