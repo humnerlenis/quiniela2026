@@ -19,7 +19,7 @@
                                                 
                                                 <div class="flex items-center gap-3">
                                                     <template x-if="selectedTeam">
-                                                        <img :src="'{{ asset('images/flags/') }}'+ selectedTeam.code'+'.png'" alt=""
+                                                        <img :src="'images/flags/'+ selectedTeam.code +'.png'" alt=""
                                                             class="w-6 h-4 object-cover">
                                                     </template>
                                                     <span x-text="selectedTeam ? selectedTeam.name : 'Selecc'"></span>
